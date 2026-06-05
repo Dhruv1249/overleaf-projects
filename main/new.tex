@@ -1,0 +1,188 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Adapted for : Dhruv
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% XeLaTeX font configuration
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman} % You can change this to Arial, Times New Roman, etc.
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+\textbf{\Huge \scshape Dhruv} \\ \vspace{4pt}
+\small \faPhone\ +91 7876503573 $|$ 
+\href{mailto:dhruv1249.lm@gmail.com}{\faEnvelope\ \underline{dhruv1249.lm@gmail.com}} $|$ 
+\href{https://www.linkedin.com/in/dhruv-ds}{\faLinkedin\ \underline{LinkedIn}} $|$
+\href{https://github.com/Dhruv1249}{\faGithub\ \underline{GitHub}} $|$
+\href{https://dhruv-personal-porfolio.vercel.app/}{\faGlobe\ \underline{Portfolio}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+Computer Science undergraduate with experience in \textbf{cloud infrastructure}, \textbf{distributed systems}, and \textbf{low-level systems programming}. Built and deployed \textbf{multi-cloud applications} using AWS, GCP, Oracle Cloud, Docker, and Kubernetes, with experience in \textbf{observability} and \textbf{CI/CD automation}. Currently developing a \textbf{bare-metal x86\_64 kernel in Rust} and applying machine learning to forecasting systems.
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Lovely Professional University}{Phagwara, Punjab}
+    {Bachelor of Technology in Computer Science and Engineering; CGPA: 8.66}{Apr 2023 -- Present}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Freelance Full Stack Developer \textmd{$|$ \href{https://varanasitoursindia.com/}{ \underline{Live}}}}{Remote}
+    {Self-Employed}{Nov 2025 -- Feb 2026}
+    \resumeItemListStart
+      \resumeItem{Developed responsive client websites focusing on \textbf{UI/UX}, mobile-first layouts, and performance optimization.}
+      \resumeItem{Built front-end systems using \textbf{Next.js}, \textbf{Tailwind CSS}, and semantic HTML/CSS.}
+      \resumeItem{Automated 100\% of the billing, invoice generation, and enquiry workflows using Firebase, Google Sheets API, and NodeMailer.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE-----------
+% \section{Open Source}
+% \resumeSubHeadingListStart
+
+%   \resumeSubheading
+%     {Arch Linux Installer (archinstall)}{Open Source}
+%     {Contributor -- \href{https://github.com/archlinux/archinstall/pull/4446}{\underline{Merged Pr \#4446: locale(hindi): Completed the hindi translation locale}}}{Apr 2026}
+%     \resumeItemListStart
+%       \resumeItem{Completed and validated \textbf{Hindi (hi) locale}, fixing fuzzy entries and ensuring full translation coverage.}
+%       \resumeItem{Corrected locale metadata and verified changes using \textbf{locale\_generator} and \textbf{pytest}.}
+%     \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Kernel-r — Bare-Metal x86\_64 Kernel} $|$ \href{https://github.com/Dhruv1249/kernel-r}{\underline{GitHub}}}{Mar 2026 -- Present}
+    \resumeItemListStart
+      \resumeItem{Developing a \textbf{custom x86\_64 kernel} in Rust, using a freestanding \textit{no\_std} environment for bare-metal execution.}
+      \resumeItem{Configured \textbf{GRUB} bootloading to handle low-level transitions from Assembly to Rust.}
+      \resumeItem{Engineered core components: \textbf{VGA text buffer drivers}, Global Descriptor Tables, and a \textbf{Buddy + Slab memory allocator}.}
+      \resumeItem{Integrating an \textbf{EEVDF + BORE scheduler} to achieve latency-optimized, highly responsive process scheduling.}
+      \resumeItem{\textbf{Tech:} Rust, x86 Assembly, QEMU, C, Linker Scripts}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{PR Tracker — Agentic AI PR Management} $|$ \href{https://github.com/Dhruv1249/Pr-Tracker}{\underline{GitHub}} $|$ \href{https://pr-tracker.dev}{\underline{Live}}}{Feb 2026 -- May 2026}
+    \resumeItemListStart
+      \resumeItem{Designed a \textbf{6-service MERN architecture} with an \textbf{Agentic AI layer} for autonomous pull request risk analysis.}
+      \resumeItem{Engineered a secure authentication gateway utilizing \textbf{GitHub OAuth} alongside \textbf{JWT-based session management}.}
+      \resumeItem{Built a \textbf{multi-cloud failover} routing via GCP to Oracle K3s and AWS, with observability via \textbf{Prometheus} and \textbf{Grafana}.}
+      \resumeItem{Automated CI/CD pipelines utilizing \textbf{GitHub Actions} and \textbf{Jenkins} to ensure seamless container rollouts.}
+      \resumeItem{\textbf{Tech:} MERN, K3s, GCP, AWS, Oracle Cloud, Prometheus, Grafana, Jenkins, GitHub Actions}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{CALYX — ML-Based Phenology Forecasting} $|$ \href{https://github.com/Dhruv1249/Plant-Phenology-State-Detector}{\underline{GitHub}} $|$ \href{https://plant-phenology-state-detector.vercel.app/}{\underline{Live}}}{Sep 2025 -- Oct 2025}
+    \resumeItemListStart
+      \resumeItem{Orchestrated \textbf{backend architecture} and \textbf{climate data pipeline} processing 24GB of data from \textbf{NASA MERRA-2}, \textbf{ERA5}, \textbf{iNaturalist}, and \textbf{K{\"o}ppen}.}
+      \resumeItem{Trained temporal-data regression models achieving \textbf{75\% prediction accuracy}.}
+      \resumeItem{Containerized and deployed the \textbf{full-stack application} via \textbf{Docker} on \textbf{Google Cloud Run}.}
+      \resumeItem{\textbf{Tech:} Next.js, Python, FastAPI, Gemini API, Docker, GCP}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Honors \& Achievements}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{NASA Space Apps Challenge 2025} $|$ Global Honorable Mention $|$ \href{https://drive.google.com/file/d/1RZ63Tk5zmSds2Rza-F8y-gWo6T2NvS6H/view?usp=sharing}{ \underline{Link}}}{Nov 2025}
+    \resumeItemListStart
+      \resumeItem{Recognized among the \textbf{Top 23 global teams} out of \textbf{11,500+ submissions}.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:} Python, Rust, C, TypeScript, JavaScript, x86 Assembly \\
+\textbf{Frontend:} React, Next.js, Tailwind CSS \\
+\textbf{Backend:} Node.js, Express.js, FastAPI \\
+\textbf{Databases:} MongoDB, Firebase \\
+\textbf{Cloud/DevOps:} AWS, GCP, Oracle Cloud, Docker, K3s, Jenkins, GitHub Actions, Prometheus, Grafana
+  }}
+\end{itemize}
+
+\end{document}
