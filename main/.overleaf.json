@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "root",
   "rootFile": null,
-  "mainFile": "new.tex"
+  "mainFile": "chapters/intro.tex"
 }
