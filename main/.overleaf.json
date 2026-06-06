@@ -3,7 +3,7 @@
   "mode": "debounced",
   "intervalSeconds": 30,
   "autoSaveSeconds": 3,
-  "compileTarget": "current",
+  "compileTarget": "root",
   "rootFile": null,
   "mainFile": "chapters/intro.tex"
 }
