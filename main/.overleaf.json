@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "current",
   "rootFile": null,
-  "mainFile": "test-upload-folder/main.tex"
+  "mainFile": "chapters/intro.tex"
 }
