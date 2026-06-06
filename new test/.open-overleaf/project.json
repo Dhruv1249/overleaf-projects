@@ -2,6 +2,7 @@
   "name": "new test",
   "description": "something",
   "branch": "main",
+  
   "compiler": "xelatex",
   "bibliography": "biber",
   "autoCompileMode": "debounced",
