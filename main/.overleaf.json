@@ -1,5 +1,5 @@
 {
-  "engine": "auto",
+  "engine": "xelatex",
   "mode": "debounced",
   "intervalSeconds": 30,
   "autoSaveSeconds": 3,
