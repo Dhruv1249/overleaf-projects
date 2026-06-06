@@ -1,0 +1,9 @@
+{
+  "name": "new",
+  "description": "",
+  "branch": "main",
+  "compiler": "xelatex",
+  "bibliography": "biber",
+  "autoCompileMode": "debounced",
+  "debounceSeconds": 2
+}
