@@ -1,0 +1,9 @@
+{
+  "engine": "auto",
+  "mode": "debounced",
+  "intervalSeconds": 30,
+  "autoSaveSeconds": 3,
+  "compileTarget": "root",
+  "rootFile": null,
+  "mainFile": null
+}
