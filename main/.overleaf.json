@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "root",
   "rootFile": "main.tex",
-  "mainFile": "main.tex"
+  "mainFile": "new.tex"
 }
