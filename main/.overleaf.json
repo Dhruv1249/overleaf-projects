@@ -3,7 +3,7 @@
   "mode": "debounced",
   "intervalSeconds": 30,
   "autoSaveSeconds": 3,
-  "compileTarget": "root",
+  "compileTarget": "current",
   "rootFile": "main.tex",
   "mainFile": "new.tex"
 }
