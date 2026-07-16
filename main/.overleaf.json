@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "current",
   "rootFile": "main.tex",
-  "mainFile": "new.tex"
+  "mainFile": "main_jake.tex"
 }
