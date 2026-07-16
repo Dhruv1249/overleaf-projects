@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "current",
   "rootFile": "main.tex",
-  "mainFile": "lpu_specialized.tex"
+  "mainFile": "lpu_main.tex"
 }
