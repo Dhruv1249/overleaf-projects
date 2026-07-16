@@ -1,6 +1,6 @@
 {
   "engine": "xelatex",
-  "mode": "debounced",
+  "mode": "live",
   "intervalSeconds": 30,
   "autoSaveSeconds": 3,
   "compileTarget": "current",
