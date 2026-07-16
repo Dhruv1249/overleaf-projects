@@ -1,0 +1,170 @@
+\documentclass[letterpaper, 11pt]{article}
+
+% ─── Packages ────────────────────────────────────────────────────────────────
+\usepackage{fontspec}
+\usepackage[letterpaper, margin=0.3in, top=0.2in, bottom=0.2in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage[none]{hyphenat}
+\usepackage{fontawesome5}
+
+% ─── Font ────────────────────────────────────────────────────────────────────
+\setmainfont{Carlito}
+
+% ─── Hyperref ────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+% ─── Section Formatting ──────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+  [\vspace{-6pt}\rule{\linewidth}{0.6pt}\vspace{-2pt}]
+
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% ─── List Formatting ─────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=2.2em,
+  label=\textbullet,
+  itemsep=0pt,
+  parsep=0pt,
+  topsep=2pt,
+  partopsep=0pt
+}
+
+% ─── No paragraph indent / tight paragraph spacing ───────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ─── Helper: entry row (bold title | italic tech | right-aligned date) ───────
+\newcommand{\cventry}[3]{%
+  \noindent
+  \textbf{#1}%
+  \ifx&#2&\else\enspace\textit{| #2}\fi%
+  \hfill\textbf{#3}\par
+  \vspace{1pt}%
+}
+
+% ─── Helper: certificate/training row ────────────────────────────────────────
+\newcommand{\certentry}[3]{%
+  \noindent\textbf{#1}\hfill #2\par
+  \noindent\textit{#3}\par
+  \vspace{3pt}%
+}
+
+% ─── Helper: education row ───────────────────────────────────────────────────
+\newcommand{\eduentry}[4]{%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par
+  \noindent\textit{#3}\hfill\textit{#4}\par
+  \vspace{3pt}%
+}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  {\Huge\bfseries Dhruv}\par
+  \vspace{2pt}
+  Kangra, Himachal Pradesh 176001\par
+  \vspace{2pt}
+  {\small
+\faPhone\enspace +91\,7876503573 \quad
+\faEnvelope\enspace \href{mailto:dhruv1249.lm@gmail.com}{dhruv1249.lm@gmail.com} \quad
+\faLinkedin\enspace \href{https://www.linkedin.com/in/dhruv-ds}{linkedin.com/in/dhruv-ds} \quad
+\faGithub\enspace \href{https://github.com/Dhruv1249}{github.com/Dhruv1249}
+}
+\end{center}
+
+\vspace{2pt}
+
+\section{Experience}
+
+\cventry{Freelance Full Stack Developer $|$ \href{https://varanasitoursindia.com/}{Project Link}}{}{Nov '25 -- Feb '26}
+\begin{itemize}
+ \item Developed responsive, \textbf{mobile-first} websites, optimizing \textbf{UI/UX} design and page load performance for better \textbf{SEO} rankings.
+\item Automated billing workflows by dynamically generating downloadable \textbf{PDF invoices} directly from user orders, removing manual invoicing entirely.
+\item Architected automated \textbf{NodeMailer} email workflows with \textbf{dynamic templating} for the instant live customer enquiry handling.
+\item Integrated \textbf{Firebase} to securely capture and manage incoming leads, and utilized the \textbf{Google Sheets API} to synchronize product catalogs.
+\end{itemize}
+
+
+\section{Projects}
+
+\vspace{3pt}
+\cventry{PR Tracker -- Agentic AI-Powered PR Management}{MERN, K3s, GCP, AWS, Prometheus, Grafana}{Feb '26 -- May '26}
+\begin{itemize}
+  \item Designed a \textbf{6-service MERN architecture} featuring an \textbf{Agentic AI layer} (powered by \textbf{Gemini API}) for autonomous pull request summarization and risk analysis.
+  \item Engineered a secure authentication gateway utilizing \textbf{GitHub OAuth} alongside \textbf{JWT-based session management} with strict role-based access control.
+  \item Built a \textbf{multi-cloud failover} via GCP to Oracle K3s and AWS, ensuring high availability along with \textbf{Prometheus} and \textbf{Grafana}.
+  \item Automated CI/CD pipelines utilizing \textbf{GitHub Actions} and \textbf{Jenkins} to ensure seamless, zero-downtime container rollouts across environments.
+  \item [] Repository Link : \href{https://github.com/Dhruv1249/Pr-Tracker}{\textbf{GitHub}} \quad
+        Live Link : \href{https://pr-tracker.dev}{\textbf{Live}}
+\end{itemize}
+
+\vspace{3pt}
+\cventry{CALYX -- ML-Based Global Phenology Forecasting}{Next.js, Python, FastAPI, Docker, GCP}{Sep '25 -- Oct '25}
+\begin{itemize}
+ \item Orchestrated \textbf{backend architecture} and \textbf{climate data pipeline} processing 24GB from \textbf{NASA MERRA-2}, \textbf{ERA5}, \textbf{iNaturalist}, and \textbf{K{\"o}ppen}, powering a global map interface for region-based ecological forecasting.
+  \item Trained temporal-data regression models on historical climate records, achieving \textbf{75\% prediction accuracy} across plant species.
+\item Containerized and deployed the \textbf{full-stack application} via \textbf{Docker} on \textbf{Google Cloud Run} for scalable, on-demand infrastructure.
+  \item [] Repository Link : \href{https://github.com/Dhruv1249/Plant-Phenology-State-Detector}{\textbf{GitHub}} \quad
+        Live Link : \href{https://plant-phenology-state-detector.vercel.app/}{\textbf{Live}}
+\end{itemize}
+
+
+
+\section{Achievement}
+
+\cventry{NASA Space Apps Challenge $|$ Global Honorable Mention $|$ \href{https://drive.google.com/file/d/1RZ63Tk5zmSds2Rza-F8y-gWo6T2NvS6H/view?usp=sharing}{Link}}{}{Nov '25}
+\begin{itemize}
+  \item Recognized among the Top 23 global teams out of 11,500+ submissions.
+\end{itemize}
+
+\vspace{3pt}
+% \cventry{Achievers Award $|$ Lovely Professional University $|$ \href{https://drive.google.com/file/d/1jUvyxd_S2_XL_4Awme9gFDLHbbeuwkiq/view?usp=sharing}{Link}}{}{Nov '25}
+% \begin{itemize}
+%   \item Awarded for outstanding performance in competitive hackathons.
+% \end{itemize}
+
+\section{Certification}
+
+\certentry{Oracle Cloud Infrastructure 2025 AI Foundations Associate}{\textbf{May '26}}{Oracle University --- \href{https://drive.google.com/file/d/1lEJNc8hZzfi4_6DZr4nOwpJpimiurhfn/view?usp=sharing}{Certificate Link}}
+% \certentry{Introduction to Large Language Models}{\textbf{Apr '25}}{NPTEL --- \href{https://drive.google.com/file/d/1Ypk5IU8V_YzrDsZ1wsVm00OnfqWnwZol/view?usp=sharing}{Certificate Link}}
+
+\section{Skills}
+
+
+\hangindent=7em
+\noindent\makebox[7em][l]{\textbf{Languages:}} Python, JavaScript, TypeScript, Rust, x86 Assembly\par
+\vspace{2pt}
+\hangindent=7.22em
+\noindent\makebox[7em][l]{\textbf{Technologies:}} React, Node.js, Express.js, FastAPI, MongoDB, Docker, Docker Compose, Google Cloud Platform, AWS, Oracle Cloud, Kubernetes, Prometheus, Grafana\par
+\vspace{2pt}
+\hangindent=7em
+\noindent\makebox[7em][l]{\textbf{Domain Skills:}} Machine Learning, Data Processing, Backend Development, Systems Programming, Problem-Solving
+
+
+\section{Education}
+
+\eduentry{Lovely Professional University}{Aug '23 -- Present}
+  {Bachelor of Technology -- Computer Science and Engineering \quad CGPA: 8.66}{Phagwara, Punjab}
+
+\eduentry{G.A.V Sr. Sec. School}{Apr '22 -- Mar '23}
+  {Intermediate --- Percentage: 83}{Kangra, Himachal Pradesh}
+
+\eduentry{M.V.M Public High School}{Apr '20 -- Mar '21}
+  {Matriculation --- Percentage: 96}{Kangra, Himachal Pradesh}
+
+\end{document}
