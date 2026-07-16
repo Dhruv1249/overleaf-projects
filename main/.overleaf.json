@@ -1,5 +1,5 @@
 {
-  "engine": "xelatex",
+  "engine": "pdflatex",
   "mode": "live",
   "intervalSeconds": 30,
   "autoSaveSeconds": 3,
