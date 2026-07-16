@@ -5,5 +5,5 @@
   "autoSaveSeconds": 3,
   "compileTarget": "current",
   "rootFile": "main.tex",
-  "mainFile": "ytfc/test.tex"
+  "mainFile": "main.tex"
 }
