@@ -1,0 +1,210 @@
+% "Dhruv" CV Template
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage{microtype}
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+\usepackage[english]{babel}
+
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
+% Prevent words from breaking like hell-o
+\usepackage[none]{hyphenat}
+
+% Give LaTeX flexibility to avoid overflow
+\tolerance=1000
+\emergencystretch=10em
+
+\usepackage{xcolor}
+\definecolor{headerblue}{RGB}{64, 90, 170}
+
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=headerblue,
+    urlcolor=headerblue,
+    citecolor=headerblue,
+    pdftitle={Dhruv - CV},
+    pdfauthor={Dhruv}
+}
+
+\newcommand{\cvlink}[2]{\href{#1}{\textcolor{headerblue}{\uline{#2}}}}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    nosep,
+    topsep=0pt,
+    partopsep=0pt,
+    leftmargin=1.2em,
+    labelsep=0.4em
+}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{headerblue}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+\usepackage{tabularx}
+
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\entry}[4]{
+    \noindent\begin{tabularx}{\linewidth}{@{} X r @{}}
+        \textbf{\color{headerblue}#1} & \textit{#2} \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+}
+
+\newcommand{\expentry}[4]{
+    \noindent\begin{tabularx}{\linewidth}{@{} X r @{}}
+        \textbf{\color{headerblue}#1} & \textit{#2} \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+    \par\vspace{-10pt}
+}
+
+\newcommand{\projectentry}[2]{
+    \noindent\begin{tabularx}{\linewidth}{@{} X r @{}}
+        \textbf{\color{headerblue}#1} & \textit{#2} \\
+    \end{tabularx}
+    \par\vspace{2pt}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER
+%----------------------------------------------------------------------------------------
+
+\noindent
+\begin{tabularx}{\linewidth}{@{} X r @{}}
+{\huge \textbf{\color{headerblue} Dhruv}} & \\[4pt]
+LinkedIn: \cvlink{https://www.linkedin.com/in/dhruv-ds}{www.linkedin.com/in/dhruv-ds}
+& Email: \cvlink{mailto:dhr1249.lm@gmail.com}{dhr1249.lm@gmail.com} \\
+GitHub: \hspace{0.22cm}\cvlink{https://github.com/Dhruv1249}{github.com/Dhruv1249}
+& Mobile: +91 7876503573 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section*{SKILLS}
+\noindent\begin{tabularx}{\linewidth}{@{} l X @{}}
+    \textbf{\color{headerblue}Languages:} & Python, JavaScript, TypeScript, Rust, x86 Assembly \\
+    \textbf{\color{headerblue}Frontend:} & HTML/CSS, React, Tailwind CSS, Next.js \\
+    \textbf{\color{headerblue}Backend:} & Node.js, Express.js, FastAPI, Firebase, MongoDB \\
+    \textbf{\color{headerblue}Cloud/DevOps:} & GCP, AWS, Docker, Kubernetes, Jenkins, GitHub Actions, CI/CD, Prometheus, Grafana \\
+    
+    \textbf{\color{headerblue}Soft Skills:} & Problem-Solving, Time Management, Teamwork, Adaptability \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section*{EXPERIENCE}
+
+\expentry{Freelance Full Stack Developer $|$ \cvlink{https://varanasitoursindia.com/}{Project Link}}{Nov '25 – Present}{}{}
+
+\begin{itemize}
+\item Developed a \textbf{responsive, mobile-first client website} utilizing modern web technologies, optimizing UI/UX design and significantly improving page load speeds for better SEO rankings.
+\item Automated \textbf{100\% of billing workflows} by dynamically generating downloadable PDF invoices directly from user orders, eliminating manual invoice creation and streamlining the checkout experience.
+\item Architected an automated \textbf{NodeMailer-based email system} integrated with dynamic templating to instantly process customer enquiries, drastically reducing average response times.
+\item Integrated \textbf{Firebase} as a centralized database to securely capture, store, and manage incoming lead and enquiry data, improving customer relationship tracking.
+\item Synchronized dynamic product catalogs programmatically via the \textbf{Google Sheets API}, enabling non-technical staff to seamlessly update website listings without requiring backend redeployments.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section*{PROJECTS}
+\begingroup
+\sloppy
+\projectentry{PR Tracker – Agentic AI-Powered Pull Request Management $|$ \cvlink{https://github.com/Dhruv1249/Pr-Tracker}{GitHub Link} $|$ \cvlink{https://pr-tracker.dev}{Live Link}}{Feb '26 - May '26}
+\begin{itemize}
+\item Built a \textbf{6-service MERN app} with an \textbf{Agentic AI layer} (Gemini API) for autonomous PR summarization and insights.
+\item Implemented secure, stateless authentication using \textbf{GitHub OAuth} and \textbf{JWT-based sessions} across distributed microservices, eliminating server-side session storage overhead.
+\item Deployed a \textbf{multi-cloud failover environment} (GCP, AWS, Oracle K3s) to ensure high availability globally reliably.
+\item Monitored cluster health and resource usage in real-time using \textbf{Prometheus} and \textbf{Grafana dashboards}, enabling early detection of performance bottlenecks.
+\item Automated zero-downtime CI/CD deployment pipelines utilizing \textbf{GitHub Actions} and \textbf{Jenkins workflows}, reducing manual deployment effort across all microservices.
+\item[] \textbf{Tech:} MERN, Docker, K3s, GCP, AWS, Oracle Cloud, Prometheus, Grafana, Jenkins, GH Actions
+\end{itemize}
+
+\vspace{0.5em}
+
+\projectentry{CALYX – ML-Based Global Phenology Forecasting $|$ \cvlink{https://github.com/Dhruv1249/Plant-Phenology-State-Detector}{GitHub Link} $|$ \cvlink{https://plant-phenology-state-detector.vercel.app/}{Live Link}}{Sep '25 - Oct '25}
+\begin{itemize}
+\item Orchestrated a \textbf{backend data pipeline} processing a \textbf{24GB climate dataset} from NASA and iNaturalist efficiently.
+\item Designed a \textbf{low-latency global map interface} enabling region-based ecological forecasting worldwide, \hspace{0.5em} reliably.
+\item Trained \textbf{temporal-data regression models} achieving \textbf{75\% prediction accuracy} for plant stages across diverse global climate zones.
+\item Integrated the \textbf{Gemini API} to \hspace{0.33em}  generate natural language \hspace{0.33em}  summaries describing detected plant and pest \hspace{0.33em} species.
+\item Containerized the full-stack web application with \textbf{Docker} and deployed via \textbf{Google Cloud Run}, ensuring consistent performance under variable traffic loads.
+\item[]\textbf{Tech:} Next.js, TypeScript, Python, FastAPI, Gemini API, Docker, Google Cloud Run (GCP)
+\end{itemize}
+\endgroup
+
+
+%-----------------------------------------------------
+% Open Source
+%-----------------------------------------------------
+
+% \section*{OPEN SOURCE}
+
+% \projectentry{Arch Linux Installer (archinstall) \textbar{} \cvlink{https://github.com/archlinux/archinstall/pull/4446}{Merged PR \#4446}}{Apr '26}
+
+% \begin{itemize}
+% \item Completed and validated \textbf{Hindi (hi) locale}, fixing fuzzy entries and ensuring full translation coverage
+% \item Corrected locale metadata and verified changes using \textbf{locale\_generator} and \textbf{pytest}
+% \end{itemize}
+
+
+%-----------------------------------------------------
+% Achievement
+%-----------------------------------------------------
+
+\section*{Achievement}
+
+\projectentry{\textbf{NASA Space Apps Challenge 2025} $|$ Global Honorable Mention $|$ \cvlink{https://drive.google.com/file/d/1RZ63Tk5zmSds2Rza-F8y-gWo6T2NvS6H/view?usp=sharing}{Link}}{Nov '25}
+
+\begin{itemize}
+
+
+\item Recognized among the \textbf{Top 23 global teams} out of \textbf{11,500+ submissions}
+
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% 	CERTIFICATES
+% ----------------------------------------------------------------------------------------
+
+% \section*{CERTIFICATION}
+
+% \begin{itemize}
+
+% \item Oracle Cloud Infrastructure 2025 AI Foundations Associate $|$ Oracle University $|$ \cvlink{https://drive.google.com/file/d/1lEJNc8hZzfi4_6DZr4nOwpJpimiurhfn/view?usp=sharing}{Link} \hfill\textit{May '26}
+
+% \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section*{EDUCATION}
+
+\entry{Lovely Professional University}{Phagwara, Punjab}{Bachelor of Technology - Computer Science and Engineering; \textbf{CGPA: 8.66}}{Since Apr '23}
+
+\entry{G.A.V Sr. Sec. School}{Kangra, Himachal Pradesh}{Intermediate; \textbf{Percentage: 83}}{Apr '22 – Mar '23}
+
+\entry{M.V.M Public High School}{Kangra, Himachal Pradesh}{Matriculation; \textbf{Percentage: 96}}{Apr '20 – Mar '21}
+
+\end{document}
